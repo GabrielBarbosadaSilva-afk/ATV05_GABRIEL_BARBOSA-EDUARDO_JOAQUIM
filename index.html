@@ -1,248 +1,148 @@
-<!-- Aluno: Eduardo Joaquim Santos da Silva | ATV04 | Turma: 513 -->
+<!--- Gabriel Barbosa da Silva Turma: 513 --->
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <title>Currículo - Eduardo Joaquim</title>
-    <!-- Favicon personalizado armazenado dentro da pasta img -->
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFrame</title>
+
+    <link rel="shortcut icon" href="imagens/iframe.ico" type="image/x-icon">
 
     <style>
-        /* Reseta margens e padding padrão do navegador */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #e8eef2;
-            font-family: "Georgia", "Times New Roman", serif;
-            color: #1d1d1d;
+
+        /* Define o fundo da página e a fonte pricipal*/
+        body{
+            background-image: url(imagens/background-image.jpg);
+            font-family: Arial;
         }
 
-        /* ID #pagina: container mestre que envolve toda a estrutura.
-           Define a largura total do site, centraliza na tela
-           e aplica a borda azul-marinho externa. */
-        #pagina {
-            width: 90%;
-            margin: 20px auto;
-            border: 3px solid #0b2545;
+        /* Define a área principal do site */
+        #container{
+            width: 80%;
+            margin: auto;
         }
 
-        /* ID #topo: cabeçalho do site com nome e subtítulo.
-           Fundo azul-marinho com texto amarelo dourado. */
-        #topo {
-            background-color: #0b2545;
-            color: #ffd166;
+        /* Estiliza o topo da página */
+        #topo{
+            background-color: #c44444;
+            border: 2px solid black;
             text-align: center;
-            padding: 25px;
-            font-family: "Verdana", sans-serif;
+            padding: 10px;
         }
 
-        /* Título h1 dentro do #topo */
-        #topo h1 {
-            margin: 0;
-            font-size: 32px;
-            letter-spacing: 2px;
-        }
-
-        /* Subtítulo p dentro do #topo */
-        #topo p {
-            margin: 8px 0 0 0;
-            font-style: italic;
-            font-size: 16px;
-        }
-
-        /* ID #meio: div que contém o menu e o conteúdo lado a lado.
-           overflow:hidden faz esta div envolver os filhos com float,
-           evitando o colapso de altura do #pagina. */
-        #meio {
-            overflow: hidden;
-        }
-
-        /* ID #menu: barra lateral de navegação.
-           float:left posiciona o menu à esquerda.
-           width:22% define a largura sem padding horizontal,
-           garantindo que 22% + 78% do #conteudo = 100% sem overflow. */
-        #menu {
-            float: left;
-            width: 22%;
-            background-color: #1d3557;
-            color: #ffffff;
-            min-height: 620px;
-        }
-
-        /* Título h3 do menu: o padding lateral fica aqui,
-           no filho, e não no #menu, evitando cálculos de largura. */
-        #menu h3 {
-            color: #ffd166;
-            border-bottom: 2px solid #ffd166;
-            padding: 15px 15px 6px 15px;
-            margin: 0;
-            font-family: "Verdana", sans-serif;
-        }
-
-        /* Lista de links dentro do #menu */
-        #menu ul {
-            list-style: square;
-            padding-left: 30px;
-            padding-right: 10px;
-            line-height: 2;
-            margin: 0;
-        }
-
-        /* ID #conteudo: área principal onde o iframe é exibido.
-           float:left posiciona esta div à direita do #menu.
-           width:78% ocupa o espaço restante (22% + 78% = 100%). */
-        #conteudo {
-            float: left;
-            width: 78%;
-            background-color: #ffffff;
-        }
-
-        /* Iframe dentro do #conteudo: ocupa toda a largura
-           da div com altura suficiente para exibir o conteúdo. */
-        #conteudo iframe {
-            display: block;
-            width: 100%;
-            height: 620px;
-            border: none;
-        }
-
-        /* ID #rodape: rodapé do site.
-           clear:both garante que fique abaixo dos floats
-           do #menu e do #conteudo. */
-        #rodape {
-            clear: both;
-            background-color: #0b2545;
-            color: #ffffff;
+        /* Define a área lateral do menu */
+        #menu{
+            width: 23%;
+            height: 730px;
+            display: inline-block;
+            background-color: #c44444;
+            border: 2px solid black;
             text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            font-family: "Verdana", sans-serif;
+            vertical-align: top;
         }
 
-        /* Link dentro do #rodape */
-        #rodape a {
-            color: #ffd166;
-            text-decoration: none;
-            font-weight: bold;
+        /* Define a área principal do conteúdo */
+        #conteudo{
+            width: 73%;
+            display: inline-block;
+            border: 2px solid black;
+            background-color: aliceblue;
+            text-align: center;
+            vertical-align: top;
         }
 
-        /* Hover do link do #rodape */
-        #rodape a:hover {
-            text-decoration: underline;
+        /* Estiliza o rodapé */
+        #rodape{
+            background-color: #c44444;
+            border: 2px solid black;
+            text-align: center;
+            padding: 10px;
         }
 
-        /* Classe .foto-perfil: estiliza a foto do aluno na barra
-           lateral com formato circular e moldura dourada. */
-        .foto-perfil {
-            display: block;
-            margin: 20px auto 0 auto;
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            border: 4px solid #ffd166;
-            object-fit: cover;
+        /* ajusta a margem da div principal */
+        .principal{
+            margin-top: 0px;
         }
 
-        /* Classe .link-menu: aparência dos links do menu lateral.
-           Aplicada nos links internos e no link externo do menu. */
-        .link-menu {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
+        /* Estiliza os títulos */
+        .titulo{
+            color: black;
         }
 
-        /* Hover da classe .link-menu */
-        .link-menu:hover {
-            color: #ffd166;
-            text-decoration: underline;
+        /* Estiliza os links do menu */
+        .link-menu{
+            color: black;
         }
+
+        /* Remove o marcador da lista */
+        .lista-menu{
+            list-style-type: none;
+            padding: 0px;
+        }
+
     </style>
+
 </head>
+
 <body>
 
-    <!-- div#pagina: container mestre de toda a página.
-         Substitui a antiga <table class="mestre">. -->
-    <div id="pagina">
+    <div class="principal" id="container">
 
-        <!-- div#topo: cabeçalho do site.
-             Substitui o antigo <td class="header" colspan="2">. -->
         <div id="topo">
-            <h1>EDUARDO JOAQUIM SANTOS DA SILVA</h1>
-            <p>Estudante de Informática &middot; Buscando estágio em TI</p>
+            <h1 class="titulo">Página Principal</h1>
         </div>
 
-        <!-- div#meio: envolve o menu e o conteúdo lado a lado.
-             O overflow:hidden contém os floats dos filhos. -->
-        <div id="meio">
+        <div id="menu">
 
-            <!-- div#menu: barra lateral de navegação.
-                 Substitui o antigo <td class="menu">.
-                 float:left a posiciona à esquerda do conteúdo. -->
-            <div id="menu">
+            <h2 class="titulo">Projetos</h2>
 
-                <!-- Foto de perfil com classe .foto-perfil.
-                     Atributos src, alt e title obrigatórios. -->
-                <img class="foto-perfil"
-                     src="img/perfil.png"
-                     alt="Foto de perfil de Eduardo Joaquim"
-                     title="Eduardo Joaquim - Aluno do IFAL">
+            <ul class="lista-menu">
 
-                <h3>Menu</h3>
-                <ul>
-                    <!-- Link interno: target="conteudo" abre curriculo.html
-                         dentro do iframe (name="conteudo"), sem
-                         recarregar a página principal. -->
-                    <li>
-                        <a class="link-menu"
-                           href="curriculo.html"
-                           target="conteudo"
-                           title="Abrir o Currículo no painel de conteúdo">Currículo</a>
-                    </li>
-                    <!-- Link interno: abre tema.html dentro do mesmo iframe. -->
-                    <li>
-                        <a class="link-menu"
-                           href="tema.html"
-                           target="conteudo"
-                           title="Abrir o Tema Livre no painel de conteúdo">Tema Livre</a>
-                    </li>
-                    <!-- Link externo com target="_blank": abre o site
-                         do IFAL em nova aba, fora do site e do iframe. -->
-                    <li>
-                        <a class="link-menu"
-                           href="https://www2.ifal.edu.br/"
-                           target="_blank"
-                           title="Visitar o site oficial do IFAL (abre em nova aba)">Site do IFAL</a>
-                    </li>
-                </ul>
-            </div>
+                <li>
+                    <a href="curriculo.html"
+                    target="principal"
+                    title="Página Currículo"
+                    class="link-menu">
+                    Currículo
+                    </a>
+                </li>
 
-            <!-- div#conteudo: área principal com o iframe.
-                 Substitui o antigo <td class="conteudo">.
-                 float:left a posiciona à direita do #menu. -->
-            <div id="conteudo">
-                <!-- iframe principal:
-                     src="curriculo.html" → carrega o currículo por padrão
-                     name="conteudo"      → alvo dos links target="conteudo"
-                     title              → obrigatório para acessibilidade -->
-                <iframe src="curriculo.html"
-                        name="conteudo"
-                        title="Área de conteúdo: exibe o currículo ou o tema livre">
-                </iframe>
-            </div>
+                <br>
 
-        </div><!-- fim de #meio -->
+                <li>
+                    <a href="temaLivre.html"
+                    target="principal"
+                    title="Página God of War 2"
+                    class="link-menu">
+                    God of War 2
+                    </a>
+                </li>
 
-        <!-- div#rodape: rodapé do site.
-             Substitui o antigo <td class="footer" colspan="2">.
-             clear:both no CSS garante que fique abaixo dos floats. -->
+            </ul>
+
+        </div>
+
+        <div id="conteudo">
+
+            <iframe
+            src="curriculo.html"
+            name="principal"
+            title="Área de conteúdo"
+            width="100%"
+            height="720"
+            frameborder="0">
+            </iframe>
+
+        </div>
+
         <div id="rodape">
-            &copy; 2026 - Eduardo Joaquim Santos da Silva &middot; Turma 523 &middot;
-            <a href="https://www2.ifal.edu.br/"
-               target="_blank"
-               title="Site oficial do IFAL (abre em nova aba)">IFAL - Campus Palmeira dos Índios</a>
+            <p>Desenvolvido por Gabriel Barbosa da Silva</p>
         </div>
 
-    </div><!-- fim de #pagina -->
+    </div>
 
 </body>
+
 </html>
