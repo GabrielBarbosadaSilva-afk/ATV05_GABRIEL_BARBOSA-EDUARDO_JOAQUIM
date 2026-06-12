@@ -1,0 +1,210 @@
+<!-- Aluno: Eduardo Joaquim Santos da Silva | ATV04 | Turma: 513 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Currículo - Eduardo Joaquim</title>
+
+    <style>
+        /* Reseta margens e padding para encaixar corretamente
+           dentro do iframe da index.html sem espaços extras. */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            font-family: "Georgia", "Times New Roman", serif;
+            color: #1d1d1d;
+        }
+
+        /* ID #pagina-curriculo: div raiz desta página interna.
+           O padding interno cria o respiro entre o conteúdo
+           e as bordas do iframe. */
+        #pagina-curriculo {
+            padding: 25px 30px;
+        }
+
+        /* ID #secao-dados: identifica unicamente a seção
+           de Dados Pessoais para fins de organização e
+           eventual estilização específica. */
+        #secao-dados {
+            margin-top: 5px;
+        }
+
+        /* ID #secao-formacao: identifica unicamente a seção
+           de Formação Acadêmica, separando-a visualmente
+           das demais seções do currículo. */
+        #secao-formacao {
+            margin-top: 5px;
+        }
+
+        /* Classe .titulo-secao: estiliza os títulos h2 de cada
+           seção do currículo. Aplicada em múltiplos elementos h2
+           para reutilizar o mesmo padrão visual (azul + barra
+           vermelha lateral) sem repetir código CSS. */
+        .titulo-secao {
+            color: #0b2545;
+            border-left: 5px solid #e63946;
+            padding-left: 10px;
+            margin-top: 25px;
+            font-family: "Verdana", sans-serif;
+        }
+
+        /* Classe .foto-curriculo: estiliza a foto de perfil
+           exibida no topo do conteúdo desta página interna.
+           Tamanho menor e moldura azul-marinho para diferenciar
+           da foto no menu lateral da index.html. */
+        .foto-curriculo {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid #0b2545;
+            object-fit: cover;
+        }
+
+        /* Classe .tabela-dados: formata as tabelas de dados
+           pessoais e de formação acadêmica. Reutilizada nas
+           duas tabelas da página com o mesmo estilo. */
+        .tabela-dados {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        /* Cabeçalhos th dentro da classe .tabela-dados */
+        .tabela-dados th {
+            background-color: #1d3557;
+            color: #ffffff;
+            text-align: left;
+            padding: 8px 12px;
+            width: 30%;
+        }
+
+        /* Células td dentro da classe .tabela-dados */
+        .tabela-dados td {
+            background-color: #f1faee;
+            padding: 8px 12px;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        /* Classe .lista-habilidades: formata a lista de
+           habilidades técnicas com marcador personalizado
+           e espaçamento generoso entre os itens. */
+        .lista-habilidades {
+            list-style: "✦ ";
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        /* Classe .destaque: realça palavras ou termos
+           importantes dentro dos parágrafos em vermelho
+           vibrante e negrito. Reutilizável em qualquer
+           ponto do texto. */
+        .destaque {
+            color: #e63946;
+            font-weight: bold;
+        }
+
+        /* Parágrafos do conteúdo */
+        #pagina-curriculo p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- div#pagina-curriculo: envolve todo o conteúdo desta
+         página interna carregada dentro do iframe. -->
+    <div id="pagina-curriculo">
+
+        <!-- Foto de perfil com classe .foto-curriculo -->
+        <img class="foto-curriculo"
+             src="img/perfil.png"
+             alt="Foto de perfil de Eduardo Joaquim"
+             title="Eduardo Joaquim - Aluno do IFAL">
+
+        <!-- Seção: apresentação pessoal -->
+        <h2 class="titulo-secao">Sobre Mim</h2>
+        <p>
+            Olá! Meu nome é <span class="destaque">Eduardo Joaquim Santos da Silva</span>,
+            tenho <b>17 anos</b> e moro em <i>Palmeira dos Índios - AL</i>.
+            Atualmente curso o <b>3º ano</b> do curso técnico de
+            <span class="destaque">Informática</span> no IFAL e tenho
+            grande interesse pela área de tecnologia, programação e desenvolvimento web.
+        </p>
+
+        <!-- div#secao-dados: seção de dados pessoais -->
+        <div id="secao-dados">
+            <h2 class="titulo-secao">Dados Pessoais</h2>
+            <!-- Tabela de dados pessoais com classe .tabela-dados.
+                 Uso legítimo de tabela: exibir dados tabulares. -->
+            <table class="tabela-dados">
+                <tr>
+                    <th>Nome completo</th>
+                    <td>Eduardo Joaquim Santos da Silva</td>
+                </tr>
+                <tr>
+                    <th>Data de nascimento</th>
+                    <td>28/06/2008 (17 anos)</td>
+                </tr>
+                <tr>
+                    <th>Cidade</th>
+                    <td>Palmeira dos Índios - Alagoas</td>
+                </tr>
+                <tr>
+                    <th>E-mail</th>
+                    <td>ejss13@aluno.ifal.edu.br</td>
+                </tr>
+                <tr>
+                    <th>Telefone</th>
+                    <td>(82) 99954-9934</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- div#secao-formacao: seção de formação acadêmica -->
+        <div id="secao-formacao">
+            <h2 class="titulo-secao">Formação Acadêmica</h2>
+            <!-- Tabela de formação com classe .tabela-dados.
+                 Reutilização da mesma classe da tabela acima. -->
+            <table class="tabela-dados">
+                <tr>
+                    <th>Instituição</th>
+                    <td>Instituto Federal de Alagoas - IFAL</td>
+                </tr>
+                <tr>
+                    <th>Curso</th>
+                    <td>Técnico em Informática (Integrado ao Ensino Médio)</td>
+                </tr>
+                <tr>
+                    <th>Série / Turma</th>
+                    <td>3º Ano &middot; Turma 523</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Seção: objetivo profissional -->
+        <h2 class="titulo-secao">Objetivo Profissional</h2>
+        <p>
+            Conquistar uma vaga de <span class="destaque">estágio na área de TI</span>,
+            aplicando na prática os conhecimentos adquiridos no curso técnico e
+            desenvolvendo habilidades reais em <b>programação</b> e
+            <b>desenvolvimento web</b>.
+        </p>
+
+        <!-- Seção: lista de habilidades técnicas -->
+        <h2 class="titulo-secao">Habilidades</h2>
+        <ul class="lista-habilidades">
+            <li><b>HTML</b> - estruturação de páginas web</li>
+            <li><b>CSS</b> - estilização e layouts</li>
+            <li><b>Python</b> - lógica e automação</li>
+            <li><b>Lógica de Programação</b></li>
+            <li><b>Inglês</b> - leitura e interpretação técnica</li>
+        </ul>
+
+    </div><!-- fim de #pagina-curriculo -->
+
+</body>
+</html>

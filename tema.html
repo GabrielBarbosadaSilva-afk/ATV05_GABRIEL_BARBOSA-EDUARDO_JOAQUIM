@@ -1,0 +1,236 @@
+<!-- Aluno: Eduardo Joaquim Santos da Silva | ATV04 | Turma: 513 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tema Livre - Dr. Stone</title>
+
+    <style>
+        /* Reseta margens e padding para encaixar corretamente
+           dentro do iframe da index.html. */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #16213e;
+            font-family: "Georgia", "Times New Roman", serif;
+            color: #e0e0e0;
+        }
+
+        /* ID #pagina-tema: div raiz desta página interna.
+           O padding cria o respiro entre o conteúdo e as
+           bordas do iframe onde esta página é exibida. */
+        #pagina-tema {
+            padding: 25px 30px;
+        }
+
+        /* ID #secao-personagens: identifica unicamente o bloco
+           da tabela de personagens, separando-o das demais
+           seções para organização e possível estilização futura. */
+        #secao-personagens {
+            margin-top: 5px;
+        }
+
+        /* ID #secao-educacao: identifica unicamente a seção
+           "Por que usar Dr. Stone na Educação?", que é o
+           trecho de argumentação da página de tema livre. */
+        #secao-educacao {
+            margin-top: 5px;
+        }
+
+        /* Classe .titulo-secao: padrão visual dos títulos h2
+           desta página. Amarelo dourado com barra verde à
+           esquerda, seguindo a identidade visual do tema
+           Dr. Stone. Reutilizada em todos os títulos. */
+        .titulo-secao {
+            color: #e8c44a;
+            border-left: 5px solid #c8e6c9;
+            padding-left: 10px;
+            margin-top: 28px;
+            font-family: "Verdana", sans-serif;
+            font-size: 18px;
+        }
+
+        /* Classe .imagem-tema: formata a imagem principal do anime.
+           max-width:100% impede que a imagem ultrapasse a largura
+           disponível dentro do iframe. */
+        .imagem-tema {
+            display: block;
+            margin: 15px auto;
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #e8c44a;
+        }
+
+        /* Classe .tabela-personagens: formata a tabela de dados
+           dos personagens principais do anime. Uso legítimo
+           de tabela: exibir dados tabulares. */
+        .tabela-personagens {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+        }
+
+        /* Cabeçalhos th dentro da classe .tabela-personagens */
+        .tabela-personagens th {
+            background-color: #e8c44a;
+            color: #1a1a2e;
+            padding: 9px 14px;
+            text-align: left;
+            font-family: "Verdana", sans-serif;
+            font-size: 14px;
+        }
+
+        /* Células td dentro da classe .tabela-personagens */
+        .tabela-personagens td {
+            background-color: #0f3460;
+            color: #e0e0e0;
+            padding: 9px 14px;
+            border-bottom: 1px solid #e8c44a;
+            font-size: 14px;
+        }
+
+        /* Classe .lista-arcos: formata a lista de arcos narrativos
+           e a lista de vantagens pedagógicas com marcador de
+           frasco de laboratório, reforçando o tema científico. */
+        .lista-arcos {
+            list-style: "⚗ ";
+            padding-left: 22px;
+            line-height: 2;
+            color: #dce3e8;
+        }
+
+        /* Classe .destaque: realça palavras importantes no texto
+           em amarelo dourado e negrito, seguindo a paleta de
+           cores do tema Dr. Stone. */
+        .destaque {
+            color: #e8c44a;
+            font-weight: bold;
+        }
+
+        /* Classe .verde: realça palavras em verde-claro,
+           cor secundária do tema. Usada para termos científicos
+           e frases de impacto positivo. */
+        .verde {
+            color: #81c784;
+            font-weight: bold;
+        }
+
+        /* Parágrafos dentro do #pagina-tema */
+        #pagina-tema p {
+            line-height: 1.7;
+            text-align: justify;
+            color: #dce3e8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- div#pagina-tema: envolve todo o conteúdo desta
+         página interna carregada dentro do iframe. -->
+    <div id="pagina-tema">
+
+        <!-- Imagem principal do anime com classe .imagem-tema -->
+        <img class="imagem-tema"
+             src="img/drstone.png"
+             alt="Arte de Dr. Stone mostrando Senku e o mundo petrificado"
+             title="Dr. Stone - A ciência como arma para reconstruir a civilização">
+
+        <!-- Seção: sinopse da história -->
+        <h2 class="titulo-secao">Sinopse</h2>
+        <p>
+            Após um misterioso fenômeno petrificar toda a humanidade, o gênio científico
+            <span class="verde">Senku Ishigami</span> desperta 3.700 anos depois, em um
+            mundo onde a natureza retomou tudo. Com sua mente brilhante e conhecimento
+            enciclopédico de ciência, Senku decide reconstruir a civilização humana
+            <span class="destaque">do zero</span>, partindo da Idade da Pedra até a era
+            moderna usando apenas recursos naturais e o poder da
+            <span class="destaque">ciência</span>.
+        </p>
+
+        <!-- div#secao-personagens: agrupa a tabela de personagens -->
+        <div id="secao-personagens">
+            <h2 class="titulo-secao">Personagens Principais</h2>
+            <!-- Tabela de personagens com classe .tabela-personagens.
+                 Uso legítimo: exibir dados tabulares comparativos. -->
+            <table class="tabela-personagens">
+                <tr>
+                    <th>Personagem</th>
+                    <th>Papel</th>
+                    <th>Característica</th>
+                </tr>
+                <tr>
+                    <td><b>Senku Ishigami</b></td>
+                    <td>Protagonista / Cientista</td>
+                    <td>Gênio da ciência, estratégico e racional</td>
+                </tr>
+                <tr>
+                    <td><b>Taiju Oki</b></td>
+                    <td>Melhor amigo de Senku</td>
+                    <td>Força física extraordinária, coração gentil</td>
+                </tr>
+                <tr>
+                    <td><b>Tsukasa Shishio</b></td>
+                    <td>Antagonista principal</td>
+                    <td>O homem mais forte do mundo petrificado</td>
+                </tr>
+                <tr>
+                    <td><b>Chrome</b></td>
+                    <td>Cientista da aldeia</td>
+                    <td>Curioso e apaixonado pela natureza</td>
+                </tr>
+                <tr>
+                    <td><b>Kohaku</b></td>
+                    <td>Guerreira da aldeia</td>
+                    <td>Ágil, corajosa e dedicada</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Seção: arcos narrativos -->
+        <h2 class="titulo-secao">Principais Arcos da História</h2>
+        <ul class="lista-arcos">
+            <li><b>Arco do Despertar</b> - Senku acorda e começa a reconstrução</li>
+            <li><b>Arco do Reino da Ciência</b> - Formação do primeiro grupo científico</li>
+            <li><b>Arco do Torneio de Pedra</b> - Batalha pela liderança da aldeia</li>
+            <li><b>Arco de Tsukasa</b> - Confronto com o Império das Forças</li>
+            <li><b>Arco do Novo Mundo</b> - Busca pela origem da petrificação</li>
+        </ul>
+
+        <!-- div#secao-educacao: argumentação sobre uso pedagógico -->
+        <div id="secao-educacao">
+            <h2 class="titulo-secao">Por que Dr. Stone Deveria Ser Usado na Educação?</h2>
+            <p>
+                Dr. Stone é uma das obras mais <span class="destaque">educativas</span> já criadas no formato de anime.
+                Ao longo da série, o protagonista Senku aplica conceitos reais de
+                <span class="verde">química, física, biologia e engenharia</span> para resolver problemas do mundo primitivo,
+                tornando o aprendizado científico visualmente envolvente e acessível para jovens.
+            </p>
+            <p>Utilizar Dr. Stone em sala de aula traz diversas vantagens pedagógicas:</p>
+            <ul class="lista-arcos">
+                <li><b>Contextualização da ciência:</b> o anime mostra <i>para que serve</i> cada conhecimento, respondendo à famosa pergunta "onde vou usar isso na vida?".</li>
+                <li><b>Motivação e engajamento:</b> alunos que já conhecem o anime ficam naturalmente curiosos sobre os experimentos mostrados, facilitando a conexão com o conteúdo escolar.</li>
+                <li><b>Pensamento científico:</b> Senku ensina a formular hipóteses, testar soluções e aprender com os erros, o método científico de forma lúdica e empolgante.</li>
+                <li><b>Interdisciplinaridade:</b> um único episódio envolve química, história, matemática e comunicação ao mesmo tempo.</li>
+                <li><b>Valores positivos:</b> a série promove o trabalho em equipe, a persistência e o respeito ao conhecimento.</li>
+            </ul>
+            <p>
+                Dr. Stone prova que <span class="verde">aprender ciência pode ser tão emocionante quanto uma aventura</span>.
+            </p>
+        </div>
+
+        <!-- Seção: opinião pessoal -->
+        <h2 class="titulo-secao">Por que Eu Gosto?</h2>
+        <p>
+            Dr. Stone me fascina porque mistura <span class="destaque">aventura</span> e
+            <span class="destaque">ciência real</span> de forma emocionante. O anime mostra
+            como fazer vidro, pólvora, antibióticos e até rádio usando apenas a natureza.
+            É inspirador ver que o <b>conhecimento científico</b> como o que aprendemos
+            no IFAL pode literalmente <span class="verde">salvar o mundo</span>.
+            A frase de Senku <i>"10 bilhões por cento!"</i> virou meu lema pessoal para
+            estudar mais.
+        </p>
+
+    </div><!-- fim de #pagina-tema -->
+
+</body>
+</html>
